@@ -20,7 +20,7 @@ layout: cv
 
 __Data Analyst__  &nbsp;&nbsp;&nbsp; `Sept 2021 -  Present`
 
-Brigham Young University-Idaho
+Brigham Young University-Idaho   
 
 - Developed Power BI and Report builder dashboards/reports for 100+ users
 - Conducted frequent data analysis using SQL queries
