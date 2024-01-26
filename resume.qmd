@@ -7,15 +7,6 @@ layout: cv
 [LinkedIn](https://www.linkedin.com/in/ana-soto-/) | [Gmail](mailto:ana.soto@gmail.com)
 
 
-## Skills and Qualifications
-
-- Power BI & DAX
-- Microsoft SQL Server
-- R Studio
-- Microsoft Excel
-- Data Visualization
-- Leadership
-
 ## Work Experience
 
 __Data Analyst__  &nbsp;&nbsp;&nbsp; `Sept 2021 -  Present`
@@ -24,16 +15,16 @@ Brigham Young University-Idaho
 
 - Developed Power BI and Report builder dashboards/reports for 100+ users
 - Conducted frequent data analysis using SQL queries
--   Led and mentored a team of four students in Power BI, SQL and R Studio
-- Collaborated on report presentation and analysis with a detail oriented team for analyses during a three month period
-- Performed a word cluster analysis to identify top-rated instructor's qualities that will influence on 100+ future online instructors' training
+- Mentored a team of four students in Power BI, SQL and R Studio
+- Collaborated on analysis presentations with a team over a three month period
+
 
 
 __Library Aide__   &nbsp;&nbsp;&nbsp; `Apr 2021 - Sept 2021`
 
 Brigham Young University - Idaho
 
-- Developed communication skills through interacting with team members and over 30 patrons per day
+- Communicated with team members and over 30 patrons per day
 - Executed various tasks efficiently while maintaining a professional work environment
 - Provided prompt assistance to library patrons and addressed inquiries
 
@@ -43,7 +34,7 @@ __Brigham Young University-Idaho__ &nbsp;&nbsp;&nbsp; `Expected Graduation July 
 
 
 
-## Additional Experience
+## Projects
 
 Database Design and Development Project &nbsp;&nbsp;&nbsp; `Apr 2022 - July 2022`
 
@@ -53,7 +44,14 @@ Database Design and Development Project &nbsp;&nbsp;&nbsp; `Apr 2022 - July 2022
 - Collaborated within a team to ensure a professional project presentation
 - Executed various SQL states to populate over eight different tables
 
+## Skills and Qualifications
 
+- Power BI & DAX
+- Microsoft SQL Server
+- R Studio
+- Microsoft Excel
+- Data Visualization
+- Leadership
 
 
 <!-- ### Footer
