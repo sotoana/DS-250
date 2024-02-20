@@ -1,5 +1,5 @@
 ---
-title: "Client Report - [What's in a name?]"
+title: "Client Report - [Project 1 - What is in a name?]"
 subtitle: "Course DS 250"
 author: "[Ana Soto]"
 format:
@@ -26,8 +26,7 @@ execute:
 ---
 
 ```{python}
-#| label: libraries
-#| include: false
+
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -40,9 +39,7 @@ import plotly.graph_objects as go
 _The approach you take to load in your data depends on the type of file its contained within. The method below is a automated and organized way of loading your data. It helps you identify and fix errors in a more proper manner. The format of the 'year' column was not recognize a date, so that had to be changed._
 
 ```{python}
-#| label: project data
-#| code-summary: Read and format project data
-# Include and execute your code here
+
 df = pd.read_csv("https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv")
 
 df['year'] = pd.to_datetime(df["year"], format="%Y")
@@ -57,7 +54,6 @@ __How does your name at your birth year compare to its use historically?__
 _The usage of the name Ana was quite popular in the year 1999. My birth year is definetly amongst the three most popular years of its usage. This could definitely explain why I have several cousins whose name is also Ana. The popularity of the name is prominent for about 20 years straight._
 
 ```{python}
-#| label: Q1 
 
 Ana = df.query("name == 'Ana'")
 
@@ -79,7 +75,6 @@ __If you talked to someone named Brittany on the phone, what is your guess of hi
 _If I was talking to a Brittany on the phone, I would guess her age was between 32 and 34 years old. More specifically, I would guess she is 34 years old. Since, the year 1990 is where the usage of the name is at its highest._
 
 ```{python}
-#| label: Q2
 
 Brittany = df.query("name == 'Brittany'")
 
@@ -99,7 +94,6 @@ __Mary,Martha,Peter, and Paul are all Christian names. From 1920-2000, compare t
 _If we take a look at the graph, its quite clear that Mary is the most popular name within the timeframe. The most popular year for the name usage is 1950. In second place, for the most popular name,is Paul. The highest peak for the usage of that name is at about 1954. It is interesting to notice that after the name Mary starts decreasing, the name Paul starts increasing in popularity. _
 
 ```{python}
-#| label: Q3
 
 ChristianNames = (df
         .query("name in ['Mary','Martha', 'Peter', 'Paul']")
@@ -120,7 +114,6 @@ __Think of a unique name from a famous movie. Plot the usage of that name and se
 _The movie 'Mission: Impossible' debuted in 1996 with Tom Cruise being the main actor. The movie had no effect on the popularity of the name in the following years. In fact, we can see that usage of the name started decreasing.However, its most popular year was 1959._
 
 ```{python}
-#| label: Q4
 
 Tom= df.query("name == 'Tom'")
 
