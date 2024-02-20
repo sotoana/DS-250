@@ -34,7 +34,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 ```
 
-
+     
 ## Elevator pitch
 
 _The approach you take to load in your data depends on the type of file its contained within. The method below is a automated and organized way of loading your data. It helps you identify and fix errors in a more proper manner. The format of the 'year' column was not recognize a date, so that had to be changed._

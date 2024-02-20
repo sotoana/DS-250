@@ -79,37 +79,37 @@
   {
     "objectID": "Projects/project1.html",
     "href": "Projects/project1.html",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - [What’s in a name?]",
     "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+    "text": "The approach you take to load in your data depends on the type of file its contained within. The method below is a automated and organized way of loading your data. It helps you identify and fix errors in a more proper manner. The format of the ‘year’ column was not recognize a date, so that had to be changed.\n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\ndf['year'] = pd.to_datetime(df[\"year\"], format=\"%Y\")"
   },
   {
     "objectID": "Projects/project1.html#elevator-pitch",
     "href": "Projects/project1.html#elevator-pitch",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - [What’s in a name?]",
     "section": "",
-    "text": "paste your elevator pitch here A SHORT (4-5 SENTENCES) PARAGRAPH THAT DESCRIBES KEY INSIGHTS TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.\n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\n\nHighlight the Questions and Tasks"
+    "text": "The approach you take to load in your data depends on the type of file its contained within. The method below is a automated and organized way of loading your data. It helps you identify and fix errors in a more proper manner. The format of the ‘year’ column was not recognize a date, so that had to be changed.\n\n\nRead and format project data\n# Include and execute your code here\ndf = pd.read_csv(\"https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv\")\n\ndf['year'] = pd.to_datetime(df[\"year\"], format=\"%Y\")"
   },
   {
     "objectID": "Projects/project1.html#questiontask-1",
     "href": "Projects/project1.html#questiontask-1",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - [What’s in a name?]",
     "section": "QUESTION|TASK 1",
-    "text": "QUESTION|TASK 1\nCOPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = df.head(1000)\\\n    .groupby('year')\\\n    .sum()\\\n    .reset_index()\\\n    .tail(10)\\\n    .filter([\"year\", \"AK\",\"AR\"])\n\ndisplay(mydat)\n\n\n\n\n\n\nNot much of a table \n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+    "text": "QUESTION|TASK 1\nHow does your name at your birth year compare to its use historically?\nThe usage of the name Ana was quite popular in the year 1999. My birth year is definetly amongst the three most popular years of its usage. This could definitely explain why I have several cousins whose name is also Ana. The popularity of the name is prominent for about 20 years straight.\n\n\nShow the code\nAna = df.query(\"name == 'Ana'\")\n\nAna_chart = px.line(Ana, x='year', y='Total', title='Ana Through Time')\n\nAna_chart.add_vline(x='1999', line_dash=\"dash\", line_color=\"orange\")\n\nAna_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nAna_chart.show()"
   },
   {
     "objectID": "Projects/project1.html#questiontask-2",
     "href": "Projects/project1.html#questiontask-2",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - [What’s in a name?]",
     "section": "QUESTION|TASK 2",
-    "text": "QUESTION|TASK 2\nCOPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = df.head(1000)\\\n    .groupby('year')\\\n    .sum()\\\n    .reset_index()\\\n    .tail(10)\\\n    .filter([\"year\", \"AK\",\"AR\"])\n\ndisplay(mydat)\n\n\n\n\n\n\nNot much of a table \n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+    "text": "QUESTION|TASK 2\nIf you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?\nIf I was talking to a Brittany on the phone, I would guess her age was between 32 and 34 years old. More specifically, I would guess she is 34 years old. Since, the year 1990 is where the usage of the name is at its highest.\n\n\nShow the code\nBrittany = df.query(\"name == 'Brittany'\")\n\nBrittany_chart = px.bar(Brittany, x='year', y='Total', title='Brittany Through Time')\n\nBrittany_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nBrittany_chart.show()"
   },
   {
     "objectID": "Projects/project1.html#questiontask-3",
     "href": "Projects/project1.html#questiontask-3",
-    "title": "Client Report - [Insert Project Title]",
+    "title": "Client Report - [What’s in a name?]",
     "section": "QUESTION|TASK 3",
-    "text": "QUESTION|TASK 3\nCOPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE\ntype your results and analysis here\n\n\nRead and format data\n# Include and execute your code here\n\n\ninclude figures in chunks and discuss your findings in the figure.\n\n\nplot example\n# Include and execute your code here\nchart = px.bar(df.head(200),\n    x=\"name\", \n    y=\"AK\"\n)\nchart.show()\n\n\n\n                                                \nMy useless chart\n\n\n\n\ntable example\n# Include and execute your code here\nmydat = df.head(1000)\\\n    .groupby('year')\\\n    .sum()\\\n    .reset_index()\\\n    .tail(10)\\\n    .filter([\"year\", \"AK\",\"AR\"])\n\ndisplay(mydat)\n\n\n\n\n\n\nNot much of a table \n\n\n\nyear\nAK\nAR\n\n\n\n\n96\n2006\n21.0\n183.0\n\n\n97\n2007\n28.0\n153.0\n\n\n98\n2008\n36.0\n212.0\n\n\n99\n2009\n34.0\n179.0\n\n\n100\n2010\n22.0\n196.0\n\n\n101\n2011\n41.0\n148.0\n\n\n102\n2012\n28.0\n140.0\n\n\n103\n2013\n26.0\n134.0\n\n\n104\n2014\n20.0\n114.0\n\n\n105\n2015\n28.0\n121.0"
+    "text": "QUESTION|TASK 3\nMary,Martha,Peter, and Paul are all Christian names. From 1920-2000, compare the name usage of each of the four names. What trends do you notice?\nIf we take a look at the graph, its quite clear that Mary is the most popular name within the timeframe. The most popular year for the name usage is 1950. In second place, for the most popular name,is Paul. The highest peak for the usage of that name is at about 1954. It is interesting to notice that after the name Mary starts decreasing, the name Paul starts increasing in popularity. \n\n\nShow the code\nChristianNames = (df\n        .query(\"name in ['Mary','Martha', 'Peter', 'Paul']\")\n        .query(\"year &gt;= 1920 and year &lt;=2000\"))\n\nChristianNames_chart = px.line(ChristianNames, x='year', y='Total', color = 'name', title='Mary, Martha, Peter and Paul Through Time')\n\nChristianNames_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count', legend_title=' ')\n\nChristianNames_chart.show()"
   },
   {
     "objectID": "Projects/project4.html",
@@ -383,5 +383,40 @@
     "title": "Ana Soto",
     "section": "",
     "text": "Database Design and Development Project     Apr 2022 - July 2022\nBrigham Young University-Idaho\n\nDesigned a comprehensive database with a proper ERD,relationships,keys, and data types\nCollaborated within a team to ensure a professional project presentation\nExecuted various SQL states to populate over eight different tables"
+  },
+  {
+    "objectID": "Projects/project1.html#questiontask-4",
+    "href": "Projects/project1.html#questiontask-4",
+    "title": "Client Report - [What’s in a name?]",
+    "section": "QUESTION|TASK 4",
+    "text": "QUESTION|TASK 4\nThink of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?\nThe movie ‘Mission: Impossible’ debuted in 1996 with Tom Cruise being the main actor. The movie had no effect on the popularity of the name in the following years. In fact, we can see that usage of the name started decreasing.However, its most popular year was 1959.\n\n\nShow the code\nTom= df.query(\"name == 'Tom'\")\n\nTom_chart = px.line(Tom, x='year', y='Total', title='Tom Through Time')\n\nTom_chart.add_vline(x='1996', line_dash=\"dash\", line_color=\"orange\")\n\nTom_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nTom_chart.show()"
+  },
+  {
+    "objectID": "Projects/project1.html#question-1",
+    "href": "Projects/project1.html#question-1",
+    "title": "Client Report - [What’s in a name?]",
+    "section": "QUESTION 1",
+    "text": "QUESTION 1\nHow does your name at your birth year compare to its use historically?\nThe usage of the name Ana was quite popular in the year 1999. My birth year is definetly amongst the three most popular years of its usage. This could definitely explain why I have several cousins whose name is also Ana. The popularity of the name is prominent for about 20 years straight.\n\n\nShow the code\nAna = df.query(\"name == 'Ana'\")\n\nAna_chart = px.line(Ana, x='year', y='Total', title='Ana Through Time')\n\nAna_chart.add_vline(x='1999', line_dash=\"dash\", line_color=\"orange\")\n\nAna_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nAna_chart.show()"
+  },
+  {
+    "objectID": "Projects/project1.html#question-2",
+    "href": "Projects/project1.html#question-2",
+    "title": "Client Report - [What’s in a name?]",
+    "section": "QUESTION 2",
+    "text": "QUESTION 2\nIf you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?\nIf I was talking to a Brittany on the phone, I would guess her age was between 32 and 34 years old. More specifically, I would guess she is 34 years old. Since, the year 1990 is where the usage of the name is at its highest.\n\n\nShow the code\nBrittany = df.query(\"name == 'Brittany'\")\n\nBrittany_chart = px.bar(Brittany, x='year', y='Total', title='Brittany Through Time')\n\nBrittany_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nBrittany_chart.show()"
+  },
+  {
+    "objectID": "Projects/project1.html#question-3",
+    "href": "Projects/project1.html#question-3",
+    "title": "Client Report - [What’s in a name?]",
+    "section": "QUESTION 3",
+    "text": "QUESTION 3\nMary,Martha,Peter, and Paul are all Christian names. From 1920-2000, compare the name usage of each of the four names. What trends do you notice?\nIf we take a look at the graph, its quite clear that Mary is the most popular name within the timeframe. The most popular year for the name usage is 1950. In second place, for the most popular name,is Paul. The highest peak for the usage of that name is at about 1954. It is interesting to notice that after the name Mary starts decreasing, the name Paul starts increasing in popularity. \n\n\nShow the code\nChristianNames = (df\n        .query(\"name in ['Mary','Martha', 'Peter', 'Paul']\")\n        .query(\"year &gt;= 1920 and year &lt;=2000\"))\n\nChristianNames_chart = px.line(ChristianNames, x='year', y='Total', color = 'name', title='Mary, Martha, Peter and Paul Through Time')\n\nChristianNames_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count', legend_title=' ')\n\nChristianNames_chart.show()"
+  },
+  {
+    "objectID": "Projects/project1.html#question-4",
+    "href": "Projects/project1.html#question-4",
+    "title": "Client Report - [What’s in a name?]",
+    "section": "QUESTION 4",
+    "text": "QUESTION 4\nThink of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?\nThe movie ‘Mission: Impossible’ debuted in 1996 with Tom Cruise being the main actor. The movie had no effect on the popularity of the name in the following years. In fact, we can see that usage of the name started decreasing.However, its most popular year was 1959.\n\n\nShow the code\nTom= df.query(\"name == 'Tom'\")\n\nTom_chart = px.line(Tom, x='year', y='Total', title='Tom Through Time')\n\nTom_chart.add_vline(x='1996', line_dash=\"dash\", line_color=\"orange\")\n\nTom_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')\n\nTom_chart.show()"
   }
 ]
