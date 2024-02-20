@@ -1,7 +1,7 @@
 ---
-title: "Client Report - [Insert Project Title]"
+title: "Client Report - [What's in a name?]"
 subtitle: "Course DS 250"
-author: "[STUDENT NAME]"
+author: "[Ana Soto]"
 format:
   html:
     self-contained: true
@@ -31,162 +31,106 @@ execute:
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import plotly.graph_objects as go
 ```
 
 
 ## Elevator pitch
 
-_paste your elevator pitch here_
-_A SHORT (4-5 SENTENCES) PARAGRAPH THAT `DESCRIBES KEY INSIGHTS` TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS._
+_The approach you take to load in your data depends on the type of file its contained within. The method below is a automated and organized way of loading your data. It helps you identify and fix errors in a more proper manner. The format of the 'year' column was not recognize a date, so that had to be changed._
 
 ```{python}
 #| label: project data
 #| code-summary: Read and format project data
 # Include and execute your code here
 df = pd.read_csv("https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv")
+
+df['year'] = pd.to_datetime(df["year"], format="%Y")
+
 ```
 
-__Highlight the Questions and Tasks__
 
-## QUESTION|TASK 1
+## QUESTION 1
 
-__COPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE__
+__How does your name at your birth year compare to its use historically?__
 
-_type your results and analysis here_
+_The usage of the name Ana was quite popular in the year 1999. My birth year is definetly amongst the three most popular years of its usage. This could definitely explain why I have several cousins whose name is also Ana. The popularity of the name is prominent for about 20 years straight._
 
 ```{python}
-#| label: Q1
-#| code-summary: Read and format data
-# Include and execute your code here
+#| label: Q1 
 
+Ana = df.query("name == 'Ana'")
 
-```
+Ana_chart = px.line(Ana, x='year', y='Total', title='Ana Through Time')
 
-_include figures in chunks and discuss your findings in the figure._
+Ana_chart.add_vline(x='1999', line_dash="dash", line_color="orange")
 
-```{python}
-#| label: Q1 chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-# Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
-)
-chart.show()
-```
+Ana_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')
 
-
-```{python}
-#| label: Q1 table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = df.head(1000)\
-    .groupby('year')\
-    .sum()\
-    .reset_index()\
-    .tail(10)\
-    .filter(["year", "AK","AR"])
-
-display(mydat)
+Ana_chart.show()
 
 ```
 
 
-## QUESTION|TASK 2
+## QUESTION 2
 
-__COPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE__
+__If you talked to someone named Brittany on the phone, what is your guess of his or her age? What ages would you not guess?__
 
-_type your results and analysis here_
+_If I was talking to a Brittany on the phone, I would guess her age was between 32 and 34 years old. More specifically, I would guess she is 34 years old. Since, the year 1990 is where the usage of the name is at its highest._
 
 ```{python}
 #| label: Q2
-#| code-summary: Read and format data
-# Include and execute your code here
 
+Brittany = df.query("name == 'Brittany'")
 
-```
+Brittany_chart = px.bar(Brittany, x='year', y='Total', title='Brittany Through Time')
 
-_include figures in chunks and discuss your findings in the figure._
+Brittany_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')
 
-```{python}
-#| label: Q2 chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-# Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
-)
-chart.show()
-```
-
-
-```{python}
-#| label: Q2 table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = df.head(1000)\
-    .groupby('year')\
-    .sum()\
-    .reset_index()\
-    .tail(10)\
-    .filter(["year", "AK","AR"])
-
-display(mydat)
+Brittany_chart.show()
 
 ```
 
 
-## QUESTION|TASK 3
+## QUESTION 3
 
-__COPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE__
+__Mary,Martha,Peter, and Paul are all Christian names. From 1920-2000, compare the name usage of each of the four names. What trends do you notice?__
 
-_type your results and analysis here_
+_If we take a look at the graph, its quite clear that Mary is the most popular name within the timeframe. The most popular year for the name usage is 1950. In second place, for the most popular name,is Paul. The highest peak for the usage of that name is at about 1954. It is interesting to notice that after the name Mary starts decreasing, the name Paul starts increasing in popularity. _
 
 ```{python}
 #| label: Q3
-#| code-summary: Read and format data
-# Include and execute your code here
 
+ChristianNames = (df
+        .query("name in ['Mary','Martha', 'Peter', 'Paul']")
+        .query("year >= 1920 and year <=2000"))
+
+ChristianNames_chart = px.line(ChristianNames, x='year', y='Total', color = 'name', title='Mary, Martha, Peter and Paul Through Time')
+
+ChristianNames_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count', legend_title=' ')
+
+ChristianNames_chart.show()
 
 ```
 
-_include figures in chunks and discuss your findings in the figure._
+## QUESTION 4
+
+__Think of a unique name from a famous movie. Plot the usage of that name and see how changes line up with the movie release. Does it look like the movie had an effect on usage?__
+
+_The movie 'Mission: Impossible' debuted in 1996 with Tom Cruise being the main actor. The movie had no effect on the popularity of the name in the following years. In fact, we can see that usage of the name started decreasing.However, its most popular year was 1959._
 
 ```{python}
-#| label: Q3 chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-# Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
-)
-chart.show()
-```
+#| label: Q4
 
+Tom= df.query("name == 'Tom'")
 
-```{python}
-#| label: Q3 table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = df.head(1000)\
-    .groupby('year')\
-    .sum()\
-    .reset_index()\
-    .tail(10)\
-    .filter(["year", "AK","AR"])
+Tom_chart = px.line(Tom, x='year', y='Total', title='Tom Through Time')
 
-display(mydat)
+Tom_chart.add_vline(x='1996', line_dash="dash", line_color="orange")
+
+Tom_chart.update_layout(xaxis_title='Year', yaxis_title='Total Count')
+
+Tom_chart.show()
 
 ```
+
