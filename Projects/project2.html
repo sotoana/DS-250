@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="[STUDENT NAME]">
+<meta name="author" content="[Ana Soto]">
 
-<title>Ana_Soto Data Science Portfolio - Client Report - [Insert Project Title]</title>
+<title>Ana_Soto Data Science Portfolio - Client Report - [Late flights and missing data(JSON files)]</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4558,7 +4558,7 @@ require(['plotly'], function(Plotly) {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-right">
-      <div class="quarto-title-block"><div><h1 class="title">Client Report - [Insert Project Title]</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> See code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+      <div class="quarto-title-block"><div><h1 class="title">Client Report - [Late flights and missing data(JSON files)]</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> See code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
             <p class="subtitle lead">Course DS 250</p>
                       </div>
   </div>
@@ -4569,7 +4569,7 @@ require(['plotly'], function(Plotly) {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>[STUDENT NAME] </p>
+               <p>[Ana Soto] </p>
             </div>
     </div>
       
@@ -4642,195 +4642,192 @@ require(['plotly'], function(Plotly) {
    
   <ul>
   <li><a href="#elevator-pitch" id="toc-elevator-pitch">Elevator pitch</a></li>
-  <li><a href="#questiontask-1" id="toc-questiontask-1">QUESTION|TASK 1</a></li>
-  <li><a href="#questiontask-2" id="toc-questiontask-2">QUESTION|TASK 2</a></li>
-  <li><a href="#questiontask-3" id="toc-questiontask-3">QUESTION|TASK 3</a></li>
+  <li><a href="#question-1" id="toc-question-1">QUESTION 1</a></li>
+  <li><a href="#question-2" id="toc-question-2">QUESTION 2</a></li>
+  <li><a href="#question-3" id="toc-question-3">QUESTION 3</a></li>
+  <li><a href="#question-4" id="toc-question-4">QUESTION 4</a></li>
+  <li><a href="#question-5" id="toc-question-5">QUESTION 5</a></li>
   </ul>
 </nav>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <section id="elevator-pitch" class="level2">
 <h2 class="anchored" data-anchor-id="elevator-pitch">Elevator pitch</h2>
 <p><em>paste your elevator pitch here</em> <em>A SHORT (4-5 SENTENCES) PARAGRAPH THAT <code>DESCRIBES KEY INSIGHTS</code> TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS.</em></p>
 <div id="project-data" class="cell" data-execution_count="2">
 <details>
 <summary>Read and format project data</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_json(<span class="st">&quot;https://raw.githubusercontent.com/byuidatascience/data4missing/master/data-raw/flights_missing/flights_missing.json&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><strong>Highlight the Questions and Tasks</strong></p>
 </section>
-<section id="questiontask-1" class="level2">
-<h2 class="anchored" data-anchor-id="questiontask-1">QUESTION|TASK 1</h2>
-<p><strong>COPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE</strong></p>
-<p><em>type your results and analysis here</em></p>
-<div id="q1" class="cell" data-execution_count="3">
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">QUESTION 1</h2>
+<p><strong>Fix all of the varied missing data types in the data to be consistent (all missing values should be displayed as “NaN”).</strong></p>
+<p><em>To start, I familiarized myself with the data, and during this process, I identified weird values such as ‘-999’, ‘n/a’, ‘1500+’, and misspellings like ‘Feburary’. These weird values could affect the accuracy of future calculations. So, I replaced these values with appropriate values, ensuring cleanliness and organization in the dataset. Additionally, I addressed any blank spaces, ensuring the data was properly formatted.</em></p>
+<div class="cell" data-execution_count="3">
 <details>
 <summary>Read and format data</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df.isnull().<span class="bu">sum</span>()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Looking into the year column</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;year&#39;</span>].unique()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Looking into &#39;minutes_delayed_carrier&#39;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;minutes_delayed_carrier&#39;</span>].unique()</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Looking into &#39;minutes_delayed_nas&#39;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;minutes_delayed_nas&#39;</span>].unique()</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#Looking into &#39;num_of_delays_late_aircraft&#39;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;num_of_delays_late_aircraft&#39;</span>].unique()</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Looking into &#39;month&#39;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;month&#39;</span>].unique()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div id="q1" class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>array([&#39;January&#39;, &#39;Febuary&#39;, &#39;March&#39;, &#39;April&#39;, &#39;May&#39;, &#39;June&#39;, &#39;July&#39;,
+       &#39;August&#39;, &#39;September&#39;, &#39;October&#39;, &#39;November&#39;, &#39;December&#39;, &#39;n/a&#39;],
+      dtype=object)</code></pre>
 </div>
-<p><em>include figures in chunks and discuss your findings in the figure.</em></p>
+</div>
+<p>_ After cleaning and replacing incorrect values, I still had to deal with missing data (NA’s). Instead of dropping these rows, I calculated the average number of delays and replaced the NA’s with this value. This approach maintains the dataset’s integrity while ensuring that future calculations have a more accurate representation of the data. _</p>
 <div class="cell" data-execution_count="4">
 <details>
-<summary>plot example</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> px.bar(df.head(<span class="dv">200</span>),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">&quot;name&quot;</span>, </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">&quot;AK&quot;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>chart.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.replace({</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">-</span><span class="dv">999</span>: np.nan,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;n/a&#39;</span>: np.nan,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Febuary&#39;</span>: <span class="st">&#39;February&#39;</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;&#39;</span>: np.nan,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;1500+&#39;</span>: <span class="dv">1500</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.query(<span class="st">&quot;month != &#39;na&#39;&quot;</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>avg_delay <span class="op">=</span> df[<span class="st">&#39;num_of_delays_late_aircraft&#39;</span>].mean()</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;num_of_delays_late_aircraft&#39;</span>].replace(np.nan, avg_delay, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="q1-chart" class="cell-output cell-output-display">
-
-<div>                            <div id="4f0d778c-ec41-42b1-9f99-8d099ccb3d97" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("4f0d778c-ec41-42b1-9f99-8d099ccb3d97")) {                    Plotly.newPlot(                        "4f0d778c-ec41-42b1-9f99-8d099ccb3d97",                        [{"alignmentgroup":"True","hovertemplate":"name=%{x}\u003cbr\u003eAK=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron"],"xaxis":"x","y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0,0.0,5.0,7.0,10.0,10.0,9.0,7.0,14.0,10.0,13.0,8.0,12.0,12.0,11.0,12.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0,0.0,0.0,5.0,7.0,0.0,0.0,0.0,0.0,6.0,6.0,9.0,8.0,17.0,26.0,37.0,23.0,33.0,42.0,41.0,35.0,53.0,54.0,52.0,55.0,59.0,54.0,54.0,62.0,61.0,58.0,60.0,44.0,56.0,57.0,55.0,35.0,42.0,30.0,35.0,33.0,29.0,24.0,25.0,22.0,29.0,22.0,10.0],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"name"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"AK"}},"legend":{"tracegroupgap":0},"margin":{"t":60},"barmode":"relative"},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('4f0d778c-ec41-42b1-9f99-8d099ccb3d97');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };                });            </script>        </div>
-<p>My useless chart</p>
 </div>
-</div>
-<div class="cell tbl-cap-location-top" data-execution_count="5">
+<div class="cell" data-execution_count="5">
 <details>
-<summary>table example</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>mydat <span class="op">=</span> df.head(<span class="dv">1000</span>)<span class="op">\</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">&#39;year&#39;</span>)<span class="op">\</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">sum</span>()<span class="op">\</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    .reset_index()<span class="op">\</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    .tail(<span class="dv">10</span>)<span class="op">\</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>([<span class="st">&quot;year&quot;</span>, <span class="st">&quot;AK&quot;</span>,<span class="st">&quot;AR&quot;</span>])</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>display(mydat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.iloc[<span class="dv">2</span>]  <span class="co"># third row (index 2)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="q1-table" class="cell-output cell-output-display">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<caption>Not much of a table </caption>
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">year</th>
-<th data-quarto-table-cell-role="th">AK</th>
-<th data-quarto-table-cell-role="th">AR</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">96</td>
-<td>2006</td>
-<td>21.0</td>
-<td>183.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">97</td>
-<td>2007</td>
-<td>28.0</td>
-<td>153.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">98</td>
-<td>2008</td>
-<td>36.0</td>
-<td>212.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">99</td>
-<td>2009</td>
-<td>34.0</td>
-<td>179.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">100</td>
-<td>2010</td>
-<td>22.0</td>
-<td>196.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">101</td>
-<td>2011</td>
-<td>41.0</td>
-<td>148.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">102</td>
-<td>2012</td>
-<td>28.0</td>
-<td>140.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">103</td>
-<td>2013</td>
-<td>26.0</td>
-<td>134.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">104</td>
-<td>2014</td>
-<td>20.0</td>
-<td>114.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">105</td>
-<td>2015</td>
-<td>28.0</td>
-<td>121.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>airport_code                         IAD
+airport_name                         NaN
+month                            January
+year                              2005.0
+num_of_flights_total               12381
+num_of_delays_carrier                414
+num_of_delays_late_aircraft       1058.0
+num_of_delays_nas                    895
+num_of_delays_security                 4
+num_of_delays_weather                 61
+num_of_delays_total                 2430
+minutes_delayed_carrier              NaN
+minutes_delayed_late_aircraft      70919
+minutes_delayed_nas              35660.0
+minutes_delayed_security             208
+minutes_delayed_weather             4497
+minutes_delayed_total             134881
+Name: 2, dtype: object</code></pre>
 </div>
 </div>
 </section>
-<section id="questiontask-2" class="level2">
-<h2 class="anchored" data-anchor-id="questiontask-2">QUESTION|TASK 2</h2>
-<p><strong>COPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE</strong></p>
-<p><em>type your results and analysis here</em></p>
-<div id="q2" class="cell" data-execution_count="6">
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">QUESTION 2</h2>
+<p><strong>Which airport has the worst delays?</strong></p>
+<p><em>The metric I decided, for the “worst” delayed airport,is a percentage of delayed flights. According to my findings, the San Francisco Internation aiport (SFO) has the worst delays out of these airports. As it has an average delay time of 201,140 minutes or 3,352 hours.</em></p>
+<div class="cell" data-execution_count="6">
 <details>
-<summary>Read and format data</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>q2 <span class="op">=</span> (df.groupby(<span class="st">&#39;airport_code&#39;</span>).agg(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>total_flights<span class="op">=</span>(<span class="st">&#39;num_of_flights_total&#39;</span>, <span class="st">&#39;sum&#39;</span>),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>delayed_flights<span class="op">=</span>(<span class="st">&#39;num_of_delays_total&#39;</span>, <span class="st">&#39;sum&#39;</span>),</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>avg_delay_time<span class="op">=</span>(<span class="st">&#39;minutes_delayed_total&#39;</span>, <span class="st">&#39;mean&#39;</span>)))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>q2[<span class="st">&#39;avg_delay_hours&#39;</span>] <span class="op">=</span> q2[<span class="st">&#39;avg_delay_time&#39;</span>] <span class="op">/</span> <span class="dv">60</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>q2[<span class="st">&#39;is_delayed&#39;</span>] <span class="op">=</span> q2[<span class="st">&#39;delayed_flights&#39;</span>] <span class="op">/</span> q2[<span class="st">&#39;total_flights&#39;</span>] <span class="op">*</span><span class="dv">100</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>q2 <span class="op">=</span> q2.sort_values(by<span class="op">=</span><span class="st">&#39;is_delayed&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># table</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(q2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div class="cell-output cell-output-stdout">
+<pre><code>              total_flights  delayed_flights  avg_delay_time  avg_delay_hours  \
+airport_code                                                                    
+SFO                 1630945           425604   201140.098485      3352.334975   
+ORD                 3597588           830825   426940.371212      7115.672854   
+ATL                 4430047           902443   408969.136364      6816.152273   
+IAD                  851571           168467    77905.136364      1298.418939   
+SAN                  917862           175132    62698.848485      1044.980808   
+DEN                 2513974           468519   190707.431818      3178.457197   
+SLC                 1403384           205160    76692.204545      1278.203409   
+
+              is_delayed  
+airport_code              
+SFO            26.095546  
+ORD            23.093945  
+ATL            20.370958  
+IAD            19.783083  
+SAN            19.080428  
+DEN            18.636589  
+SLC            14.618950  </code></pre>
 </div>
-<p><em>include figures in chunks and discuss your findings in the figure.</em></p>
+</div>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">QUESTION 3</h2>
+<p><strong>What is the best month to fly if you want to avoid delays of any length?</strong></p>
+<p><em> September stands out as the top choice for travel if you aim to avoid flight delays. Because only around 16.5% of flights experience delays during this month.</em></p>
 <div class="cell" data-execution_count="7">
 <details>
-<summary>plot example</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> px.bar(df.head(<span class="dv">200</span>),</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">&quot;name&quot;</span>, </span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">&quot;AK&quot;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>chart.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df_cleaned <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">&#39;month&#39;</span>])</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>q3 <span class="op">=</span> df.groupby(<span class="st">&#39;month&#39;</span>).agg(</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    total_flights<span class="op">=</span>(<span class="st">&#39;num_of_flights_total&#39;</span>, <span class="st">&#39;sum&#39;</span>),</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    delayed_flights<span class="op">=</span>(<span class="st">&#39;num_of_delays_total&#39;</span>, <span class="st">&#39;sum&#39;</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">#proportion</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>q3[<span class="st">&#39;is_delayed&#39;</span>] <span class="op">=</span> q3[<span class="st">&#39;delayed_flights&#39;</span>] <span class="op">/</span> q3[<span class="st">&#39;total_flights&#39;</span>]<span class="op">*</span><span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="q2-chart" class="cell-output cell-output-display">
+</div>
+<div class="cell" data-execution_count="8">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>months_order <span class="op">=</span> [<span class="st">&#39;January&#39;</span>, <span class="st">&#39;February&#39;</span>, <span class="st">&#39;March&#39;</span>, <span class="st">&#39;April&#39;</span>, <span class="st">&#39;May&#39;</span>, <span class="st">&#39;June&#39;</span>, <span class="st">&#39;July&#39;</span>, <span class="st">&#39;August&#39;</span>, <span class="st">&#39;September&#39;</span>, <span class="st">&#39;October&#39;</span>, <span class="st">&#39;November&#39;</span>, <span class="st">&#39;December&#39;</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>q3 <span class="op">=</span> q3.reindex(months_order)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>q3_visual <span class="op">=</span> px.bar(q3, x<span class="op">=</span>q3.index, y<span class="op">=</span><span class="st">&#39;is_delayed&#39;</span>, </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>                   color<span class="op">=</span><span class="st">&#39;is_delayed&#39;</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                   labels<span class="op">=</span>{<span class="st">&#39;is_delayed&#39;</span>: <span class="st">&#39;Delayed Percentage&#39;</span>},</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                   title<span class="op">=</span><span class="st">&#39;Proportion of Delayed Flights by Month&#39;</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>q3_visual.update_layout(xaxis_title<span class="op">=</span><span class="st">&#39;Month&#39;</span>, yaxis_title<span class="op">=</span><span class="st">&#39;Proportion of Delayed Flights&#39;</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>q3_visual.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
 
-<div>                            <div id="6dcd7d49-acb8-479c-aad0-61279cd071ea" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("6dcd7d49-acb8-479c-aad0-61279cd071ea")) {                    Plotly.newPlot(                        "6dcd7d49-acb8-479c-aad0-61279cd071ea",                        [{"alignmentgroup":"True","hovertemplate":"name=%{x}\u003cbr\u003eAK=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron"],"xaxis":"x","y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0,0.0,5.0,7.0,10.0,10.0,9.0,7.0,14.0,10.0,13.0,8.0,12.0,12.0,11.0,12.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0,0.0,0.0,5.0,7.0,0.0,0.0,0.0,0.0,6.0,6.0,9.0,8.0,17.0,26.0,37.0,23.0,33.0,42.0,41.0,35.0,53.0,54.0,52.0,55.0,59.0,54.0,54.0,62.0,61.0,58.0,60.0,44.0,56.0,57.0,55.0,35.0,42.0,30.0,35.0,33.0,29.0,24.0,25.0,22.0,29.0,22.0,10.0],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"name"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"AK"}},"legend":{"tracegroupgap":0},"margin":{"t":60},"barmode":"relative"},                        {"responsive": true}                    ).then(function(){
+<div>                            <div id="a951086d-4c88-4be5-835d-113db9084034" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("a951086d-4c88-4be5-835d-113db9084034")) {                    Plotly.newPlot(                        "a951086d-4c88-4be5-835d-113db9084034",                        [{"alignmentgroup":"True","hovertemplate":"month=%{x}\u003cbr\u003eDelayed Percentage=%{marker.color}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":[22.212657311121877,22.22888402547378,20.615475905947896,18.369752715477926,19.017344100603115,24.347400516059654,23.325102916658466,20.94875662655656,16.45238622955522,18.067288869494135,16.68317257645723,25.683186503518662],"coloraxis":"coloraxis","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"textposition":"auto","x":["January","February","March","April","May","June","July","August","September","October","November","December"],"xaxis":"x","y":[22.212657311121877,22.22888402547378,20.615475905947896,18.369752715477926,19.017344100603115,24.347400516059654,23.325102916658466,20.94875662655656,16.45238622955522,18.067288869494135,16.68317257645723,25.683186503518662],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Month"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Proportion of Delayed Flights"}},"coloraxis":{"colorbar":{"title":{"text":"Delayed Percentage"}},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"legend":{"tracegroupgap":0},"title":{"text":"Proportion of Delayed Flights by Month"},"barmode":"relative"},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('6dcd7d49-acb8-479c-aad0-61279cd071ea');
+var gd = document.getElementById('a951086d-4c88-4be5-835d-113db9084034');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -4853,96 +4850,169 @@ if (outputEl) {{
 }}
 
                         })                };                });            </script>        </div>
-<p>My useless chart</p>
 </div>
 </div>
-<div class="cell tbl-cap-location-top" data-execution_count="8">
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">QUESTION 4</h2>
+<p><strong>Your job is to create a new column that calculates the total number of flights delayed by weather (both severe and mild).</strong></p>
+<p><em>The columns created in this question offer valuable insights. By looking at the two columns, we gain more detailed information about the types of weather delays. The ‘mild’ weather column accounts for 30% of flight delays, while the ‘NAS’ category exhibits variation based on the month. Specifically, during certain months, it affects 40% of flight delays, while outside of these months, the percentage rises to 65%.</em></p>
+<div class="cell" data-execution_count="9">
 <details>
-<summary>table example</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>mydat <span class="op">=</span> df.head(<span class="dv">1000</span>)<span class="op">\</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">&#39;year&#39;</span>)<span class="op">\</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">sum</span>()<span class="op">\</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    .reset_index()<span class="op">\</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    .tail(<span class="dv">10</span>)<span class="op">\</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>([<span class="st">&quot;year&quot;</span>, <span class="st">&quot;AK&quot;</span>,<span class="st">&quot;AR&quot;</span>])</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>display(mydat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>q4 <span class="op">=</span> df.assign(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>mild_weather_delays <span class="op">=</span> df.num_of_delays_late_aircraft <span class="op">*</span> <span class="fl">0.3</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>nas_weather_delays <span class="op">=</span> np.where(</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    df.month.isin([<span class="st">&#39;April&#39;</span>, <span class="st">&#39;May&#39;</span>, <span class="st">&#39;June&#39;</span>, <span class="st">&#39;July&#39;</span> <span class="st">&#39;August&#39;</span>]),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    df.num_of_delays_nas <span class="op">*</span> <span class="fl">0.4</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    df.num_of_delays_nas <span class="op">*</span> <span class="fl">0.65</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="q2-table" class="cell-output cell-output-display">
+</div>
+<p><em>For example, take a look at Atlanta International Airport, there were 332 flights delayed due to mild weather conditions, while nearly 3000 flights were delayed based on the NAS category.</em></p>
+<div class="cell" data-execution_count="10">
+<details>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>q4.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 
 
 <table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<caption>Not much of a table </caption>
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">airport_code</th>
+<th data-quarto-table-cell-role="th">airport_name</th>
+<th data-quarto-table-cell-role="th">month</th>
 <th data-quarto-table-cell-role="th">year</th>
-<th data-quarto-table-cell-role="th">AK</th>
-<th data-quarto-table-cell-role="th">AR</th>
+<th data-quarto-table-cell-role="th">num_of_flights_total</th>
+<th data-quarto-table-cell-role="th">num_of_delays_carrier</th>
+<th data-quarto-table-cell-role="th">num_of_delays_late_aircraft</th>
+<th data-quarto-table-cell-role="th">num_of_delays_nas</th>
+<th data-quarto-table-cell-role="th">num_of_delays_security</th>
+<th data-quarto-table-cell-role="th">num_of_delays_weather</th>
+<th data-quarto-table-cell-role="th">num_of_delays_total</th>
+<th data-quarto-table-cell-role="th">minutes_delayed_carrier</th>
+<th data-quarto-table-cell-role="th">minutes_delayed_late_aircraft</th>
+<th data-quarto-table-cell-role="th">minutes_delayed_nas</th>
+<th data-quarto-table-cell-role="th">minutes_delayed_security</th>
+<th data-quarto-table-cell-role="th">minutes_delayed_weather</th>
+<th data-quarto-table-cell-role="th">minutes_delayed_total</th>
+<th data-quarto-table-cell-role="th">mild_weather_delays</th>
+<th data-quarto-table-cell-role="th">nas_weather_delays</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">96</td>
-<td>2006</td>
-<td>21.0</td>
-<td>183.0</td>
+<td data-quarto-table-cell-role="th">0</td>
+<td>ATL</td>
+<td>Atlanta, GA: Hartsfield-Jackson Atlanta Intern...</td>
+<td>January</td>
+<td>2005.0</td>
+<td>35048</td>
+<td>1500</td>
+<td>1109.104072</td>
+<td>4598</td>
+<td>10</td>
+<td>448</td>
+<td>8355</td>
+<td>116423.0</td>
+<td>104415</td>
+<td>207467.0</td>
+<td>297</td>
+<td>36931</td>
+<td>465533</td>
+<td>332.731222</td>
+<td>2988.70</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">97</td>
-<td>2007</td>
-<td>28.0</td>
-<td>153.0</td>
+<td data-quarto-table-cell-role="th">1</td>
+<td>DEN</td>
+<td>Denver, CO: Denver International</td>
+<td>January</td>
+<td>2005.0</td>
+<td>12687</td>
+<td>1041</td>
+<td>928.000000</td>
+<td>935</td>
+<td>11</td>
+<td>233</td>
+<td>3153</td>
+<td>53537.0</td>
+<td>70301</td>
+<td>36817.0</td>
+<td>363</td>
+<td>21779</td>
+<td>182797</td>
+<td>278.400000</td>
+<td>607.75</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">98</td>
-<td>2008</td>
-<td>36.0</td>
-<td>212.0</td>
+<td data-quarto-table-cell-role="th">2</td>
+<td>IAD</td>
+<td>NaN</td>
+<td>January</td>
+<td>2005.0</td>
+<td>12381</td>
+<td>414</td>
+<td>1058.000000</td>
+<td>895</td>
+<td>4</td>
+<td>61</td>
+<td>2430</td>
+<td>NaN</td>
+<td>70919</td>
+<td>35660.0</td>
+<td>208</td>
+<td>4497</td>
+<td>134881</td>
+<td>317.400000</td>
+<td>581.75</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">99</td>
-<td>2009</td>
-<td>34.0</td>
-<td>179.0</td>
+<td data-quarto-table-cell-role="th">3</td>
+<td>ORD</td>
+<td>Chicago, IL: Chicago O&#39;Hare International</td>
+<td>January</td>
+<td>2005.0</td>
+<td>28194</td>
+<td>1197</td>
+<td>2255.000000</td>
+<td>5415</td>
+<td>5</td>
+<td>306</td>
+<td>9178</td>
+<td>88691.0</td>
+<td>160811</td>
+<td>364382.0</td>
+<td>151</td>
+<td>24859</td>
+<td>638894</td>
+<td>676.500000</td>
+<td>3519.75</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">100</td>
-<td>2010</td>
-<td>22.0</td>
-<td>196.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">101</td>
-<td>2011</td>
-<td>41.0</td>
-<td>148.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">102</td>
-<td>2012</td>
-<td>28.0</td>
-<td>140.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">103</td>
-<td>2013</td>
-<td>26.0</td>
-<td>134.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">104</td>
-<td>2014</td>
-<td>20.0</td>
-<td>114.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">105</td>
-<td>2015</td>
-<td>28.0</td>
-<td>121.0</td>
+<td data-quarto-table-cell-role="th">4</td>
+<td>SAN</td>
+<td>San Diego, CA: San Diego International</td>
+<td>January</td>
+<td>2005.0</td>
+<td>7283</td>
+<td>572</td>
+<td>680.000000</td>
+<td>638</td>
+<td>7</td>
+<td>56</td>
+<td>1952</td>
+<td>27436.0</td>
+<td>38445</td>
+<td>21127.0</td>
+<td>218</td>
+<td>4326</td>
+<td>91552</td>
+<td>204.000000</td>
+<td>414.70</td>
 </tr>
 </tbody>
 </table>
@@ -4951,32 +5021,37 @@ if (outputEl) {{
 </div>
 </div>
 </section>
-<section id="questiontask-3" class="level2">
-<h2 class="anchored" data-anchor-id="questiontask-3">QUESTION|TASK 3</h2>
-<p><strong>COPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE</strong></p>
-<p><em>type your results and analysis here</em></p>
-<div id="q3" class="cell" data-execution_count="9">
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">QUESTION 5</h2>
+<p><strong>Using the new weather variable calculated above, create a barplot showing the proportion of all flights that are delayed by weather at each airport. Discuss what you learn from this graph.</strong></p>
+<p><em>The visualization reveals that weather-related delays are most prevalent at O’Hare International aiport (ORD), Sand Diego International aiport (SAN), and the Atlanta International aiport (ATL), with ORD experiencing the highest proportion of these types of delays.</em></p>
+<div class="cell" data-execution_count="11">
 <details>
-<summary>Read and format data</summary>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>q4[<span class="st">&#39;total_weather_delays&#39;</span>] <span class="op">=</span> q4[<span class="st">&#39;nas_weather_delays&#39;</span>] <span class="op">+</span> q4[<span class="st">&#39;mild_weather_delays&#39;</span>]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>total_flights <span class="op">=</span> df.groupby(<span class="st">&#39;airport_code&#39;</span>)[<span class="st">&#39;num_of_flights_total&#39;</span>].<span class="bu">sum</span>().reset_index()</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>q5 <span class="op">=</span> q4.merge(total_flights, on<span class="op">=</span><span class="st">&#39;airport_code&#39;</span>, how<span class="op">=</span><span class="st">&#39;left&#39;</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>q5[<span class="st">&#39;is_delayed_by_weather&#39;</span>] <span class="op">=</span> (q5[<span class="st">&#39;total_weather_delays&#39;</span>] <span class="op">/</span> total_flights[<span class="st">&#39;num_of_flights_total&#39;</span>])<span class="op">*</span><span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><em>include figures in chunks and discuss your findings in the figure.</em></p>
-<div class="cell" data-execution_count="10">
+<div class="cell" data-execution_count="12">
 <details>
-<summary>plot example</summary>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>chart <span class="op">=</span> px.bar(df.head(<span class="dv">200</span>),</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">&quot;name&quot;</span>, </span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">&quot;AK&quot;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>chart.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>q5_visual <span class="op">=</span> px.bar(q5, x<span class="op">=</span><span class="st">&#39;airport_code&#39;</span>, y<span class="op">=</span><span class="st">&#39;is_delayed_by_weather&#39;</span>,</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>title<span class="op">=</span><span class="st">&#39;Proportion of Flights Delayed by Weather at Each Airport&#39;</span>,</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>labels<span class="op">=</span>{<span class="st">&#39;weather_delay_proportion&#39;</span>: <span class="st">&#39;Proportion of Flights Delayed by Weather&#39;</span>, <span class="st">&#39;airport&#39;</span>: <span class="st">&#39;Airport&#39;</span>})</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>q5_visual.update_xaxes(title_text<span class="op">=</span><span class="st">&#39;Airport&#39;</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>q5_visual.update_yaxes(title_text<span class="op">=</span><span class="st">&#39;Proportion of Flights Delayed by Weather&#39;</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>q5_visual.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="q3-chart" class="cell-output cell-output-display">
+<div class="cell-output cell-output-display">
 
-<div>                            <div id="e3f9992d-354a-4fa5-9fb1-808db5d0ffc0" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("e3f9992d-354a-4fa5-9fb1-808db5d0ffc0")) {                    Plotly.newPlot(                        "e3f9992d-354a-4fa5-9fb1-808db5d0ffc0",                        [{"alignmentgroup":"True","hovertemplate":"name=%{x}\u003cbr\u003eAK=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aaden","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aadhya","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aaliyah","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aamir","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aanya","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarav","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aarna","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron","Aaron"],"xaxis":"x","y":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,5.0,0.0,5.0,7.0,10.0,10.0,9.0,7.0,14.0,10.0,13.0,8.0,12.0,12.0,11.0,12.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6.0,0.0,0.0,5.0,7.0,0.0,0.0,0.0,0.0,6.0,6.0,9.0,8.0,17.0,26.0,37.0,23.0,33.0,42.0,41.0,35.0,53.0,54.0,52.0,55.0,59.0,54.0,54.0,62.0,61.0,58.0,60.0,44.0,56.0,57.0,55.0,35.0,42.0,30.0,35.0,33.0,29.0,24.0,25.0,22.0,29.0,22.0,10.0],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"name"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"AK"}},"legend":{"tracegroupgap":0},"margin":{"t":60},"barmode":"relative"},                        {"responsive": true}                    ).then(function(){
+<div>                            <div id="1e1b7a46-6a5c-4308-a0a5-c727fc887eba" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("1e1b7a46-6a5c-4308-a0a5-c727fc887eba")) {                    Plotly.newPlot(                        "1e1b7a46-6a5c-4308-a0a5-c727fc887eba",                        [{"alignmentgroup":"True","hovertemplate":"airport_code=%{x}\u003cbr\u003eis_delayed_by_weather=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"textposition":"auto","x":["ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC","ATL","DEN","IAD","ORD","SAN","SFO","SLC"],"xaxis":"x","y":[0.07497507863278781,0.03524897234418494,0.10558720294608435,0.11664064923498745,0.06740664718661411,0.0599529720499465,0.05207412939010278,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Airport"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Proportion of Flights Delayed by Weather"}},"legend":{"tracegroupgap":0},"title":{"text":"Proportion of Flights Delayed by Weather at Each Airport"},"barmode":"relative"},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('e3f9992d-354a-4fa5-9fb1-808db5d0ffc0');
+var gd = document.getElementById('1e1b7a46-6a5c-4308-a0a5-c727fc887eba');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -4999,101 +5074,6 @@ if (outputEl) {{
 }}
 
                         })                };                });            </script>        </div>
-<p>My useless chart</p>
-</div>
-</div>
-<div class="cell tbl-cap-location-top" data-execution_count="11">
-<details>
-<summary>table example</summary>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Include and execute your code here</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>mydat <span class="op">=</span> df.head(<span class="dv">1000</span>)<span class="op">\</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">&#39;year&#39;</span>)<span class="op">\</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">sum</span>()<span class="op">\</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    .reset_index()<span class="op">\</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    .tail(<span class="dv">10</span>)<span class="op">\</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">filter</span>([<span class="st">&quot;year&quot;</span>, <span class="st">&quot;AK&quot;</span>,<span class="st">&quot;AR&quot;</span>])</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>display(mydat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div id="q3-table" class="cell-output cell-output-display">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<caption>Not much of a table </caption>
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">year</th>
-<th data-quarto-table-cell-role="th">AK</th>
-<th data-quarto-table-cell-role="th">AR</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">96</td>
-<td>2006</td>
-<td>21.0</td>
-<td>183.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">97</td>
-<td>2007</td>
-<td>28.0</td>
-<td>153.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">98</td>
-<td>2008</td>
-<td>36.0</td>
-<td>212.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">99</td>
-<td>2009</td>
-<td>34.0</td>
-<td>179.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">100</td>
-<td>2010</td>
-<td>22.0</td>
-<td>196.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">101</td>
-<td>2011</td>
-<td>41.0</td>
-<td>148.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">102</td>
-<td>2012</td>
-<td>28.0</td>
-<td>140.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">103</td>
-<td>2013</td>
-<td>26.0</td>
-<td>134.0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">104</td>
-<td>2014</td>
-<td>20.0</td>
-<td>114.0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">105</td>
-<td>2015</td>
-<td>28.0</td>
-<td>121.0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
 </div>
 </div>
 
