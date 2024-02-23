@@ -24,7 +24,7 @@ execute:
   warning: false
     
 ---
-
+     
 ```{python}
 
 import pandas as pd
