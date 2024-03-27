@@ -118,7 +118,7 @@ __A.Write an SQL query that provides playerID, yearID, and batting average for p
 _The query results showcase players who had at least one at-bat each year, spanning from 1960 to 2017. It's evident that these top 5 players demonstrated exceptional batting skills based on their batting averages. As it means that they successfully reached a base everytime that year._
 
 ```{python}
-
+     
 q2a = '''
    SELECT b.playerID, b.yearID, 
    ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS batting_average
