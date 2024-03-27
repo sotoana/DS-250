@@ -1,7 +1,7 @@
 ---
-title: "Client Report - [Insert Project Title]"
+title: "Project 3 - [Finding relationships in baseball.]"
 subtitle: "Course DS 250"
-author: "[STUDENT NAME]"
+author: "[ANA SOTO]"
 format:
   html:
     self-contained: true
@@ -26,167 +26,186 @@ execute:
 ---
 
 ```{python}
-#| label: libraries
-#| include: false
-import pandas as pd
-import numpy as np
-import plotly.express as px
+
+    #Load modules
+    import pandas as pd 
+    import numpy as np
+    import sqlite3
+    import plotly.express as px
+
+
 ```
-
-
-## Elevator pitch
-
-_paste your elevator pitch here_
-_A SHORT (4-5 SENTENCES) PARAGRAPH THAT `DESCRIBES KEY INSIGHTS` TAKEN FROM METRICS IN THE PROJECT RESULTS THINK TOP OR MOST IMPORTANT RESULTS._
 
 ```{python}
-#| label: project data
-#| code-summary: Read and format project data
-# Include and execute your code here
-df = pd.read_csv("https://github.com/byuidatascience/data4names/raw/master/data-raw/names_year/names_year.csv")
+
+#Establish connection with database
+
+# Carefully specify the absolute path to the SQLite file
+sqlite_file = r'C:\Users\ana8s\OneDrive\Documents\BYU-IDAHO\DS 250\DS-250\Projects\lahmansbaseballdb.sqlite'
+
+con = sqlite3.connect(sqlite_file)
+
+q = 'SELECT * FROM allstarfull LIMIT 5'
+results = pd.read_sql_query(q,con)
+
+results
+
+
 ```
 
-__Highlight the Questions and Tasks__
+```{python}
+
+#Look at the different tables in the database
+
+q = '''
+    SELECT * 
+    FROM sqlite_master 
+    WHERE type='table'
+    '''
+table = pd.read_sql_query(q,con)
+table.filter(['name'])
+
+```
+## Elevator pitch
+
+_The batting average stands out as the most important metric in this project as it provides a clear measure of each player's performance. Calculating this metric allows us to observe the average effectiveness of players, offering valuable insights into their contributions to the team. This could potentially help teams make informed decisions about player management and game strategies.This project has shown me the flexibility of SQL, demonstrating its ability to adapt queries to specific needs for efficient data analysis._
+
+```{python}
+
+elevator_pitch = '''
+    SELECT b.playerID, 
+       ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS career_batting_average
+    FROM batting AS b
+    GROUP BY b.playerID
+    HAVING SUM(AB) >= 100  
+    ORDER BY career_batting_average DESC
+    LIMIT 5;
+            '''
+```
+
 
 ## QUESTION|TASK 1
 
-__COPY PASTE QUESTION|TASK 1 FROM THE PROJECT HERE__
+__Write an SQL query to create a new dataframe about baseball players who attended BYU-Idaho. The new table should contain five columns: playerID, schoolID, salary, and the yearID/teamID associated with each salary. Order the table by salary (highest to lowest) and print out the table in your report.__
 
-_type your results and analysis here_
-
-```{python}
-#| label: Q1
-#| code-summary: Read and format data
-# Include and execute your code here
-
-
-```
-
-_include figures in chunks and discuss your findings in the figure._
+_
+It's interesting to discover that two baseball players graduated from BYUI. Their salaries have varied widely over the years, ranging from 4 million to approximately 150k. Interestingly, it appears that "lindsma01" earned the highest salary while playing for the Chicago White Sox team in 2014_
 
 ```{python}
-#| label: Q1 chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-# Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
-)
-chart.show()
-```
 
-
-```{python}
-#| label: Q1 table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = df.head(1000)\
-    .groupby('year')\
-    .sum()\
-    .reset_index()\
-    .tail(10)\
-    .filter(["year", "AK","AR"])
-
-display(mydat)
+q1 = '''
+    SELECT DISTINCT p.playerID, s.schoolID, sa.salary, sa.yearID, sa.teamID
+    FROM people AS p
+    INNER JOIN collegeplaying AS c ON p.playerID = c.playerID
+    INNER JOIN schools AS s ON c.schoolID = s.schoolID
+    INNER JOIN salaries AS sa ON p.playerID = sa.playerID
+    WHERE s.schoolID = 'idbyuid'
+    ORDER BY sa.salary DESC;
+    '''
+question_1 = pd.read_sql_query(q1,con)
+    
+question_1
 
 ```
 
 
 ## QUESTION|TASK 2
 
-__COPY PASTE QUESTION|TASK 2 FROM THE PROJECT HERE__
+__This three-part question requires you to calculate batting average (number of hits divided by the number of at-bats)__
 
-_type your results and analysis here_
+__A.Write an SQL query that provides playerID, yearID, and batting average for players with at least 1 at bat that year. Sort the table from highest batting average to lowest, and then by playerid alphabetically. Show the top 5 results in your report.__
+
+_The query results showcase players who had at least one at-bat each year, spanning from 1960 to 2017. It's evident that these top 5 players demonstrated exceptional batting skills based on their batting averages. As it means that they successfully reached a base everytime that year._
 
 ```{python}
-#| label: Q2
-#| code-summary: Read and format data
-# Include and execute your code here
 
+q2a = '''
+   SELECT b.playerID, b.yearID, 
+   ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS batting_average
+    FROM batting AS b
+    WHERE AB > 0
+    GROUP BY b.playerID, b.yearID
+    ORDER BY batting_average DESC
+    LIMIT 5;
+    '''
+question_2a = pd.read_sql_query(q2a,con)
+    
+question_2a
 
 ```
 
-_include figures in chunks and discuss your findings in the figure._
+
+__B.Use the same query as above, but only include players with at least 10 at bats that year. Print the top 5 results.__
+
+_The query results showcase players who had at least 10 at-bat each year, spanning from 1930 to 1974. It's evident that the top player, 'nymanny01' is quite efficient according to his batting average. As it means that he successfully reached a base 64.3% of the time._
 
 ```{python}
-#| label: Q2 chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-# Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
-)
-chart.show()
+
+q2b = '''
+    SELECT b.playerID, b.yearID, 
+       ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS batting_average
+    FROM batting AS b
+    WHERE AB >= 10  
+    GROUP BY b.playerID, b.yearID
+    ORDER BY batting_average DESC, b.playerID
+    LIMIT 5;
+'''
+question_2b = pd.read_sql_query(q2b,con)
+    
+question_2b
+
 ```
 
+__C.Now calculate the batting average for players over their entire careers (all years combined). Only include players with at least 100 at bats, and print the top 5 results.__
+
+_The query results showcase players who had at least 100 at-bat each year, inlcuding all of the years. According to the query, these top 5 players were able to reach base about 36% of the time. _
 
 ```{python}
-#| label: Q2 table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = df.head(1000)\
-    .groupby('year')\
-    .sum()\
-    .reset_index()\
-    .tail(10)\
-    .filter(["year", "AK","AR"])
 
-display(mydat)
+q2c = '''
+    SELECT b.playerID, 
+       ROUND(CAST(SUM(H) AS FLOAT) / NULLIF(SUM(AB), 0), 3) AS career_batting_average
+    FROM batting AS b
+    GROUP BY b.playerID
+    HAVING SUM(AB) >= 100  
+    ORDER BY career_batting_average DESC
+    LIMIT 5;
+'''
+question_2c = pd.read_sql_query(q2c,con)
+    
+question_2c
 
 ```
 
 
 ## QUESTION|TASK 3
 
-__COPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE__
+__Pick any two baseball teams and compare them using a metric of your choice (average salary, home runs, number of wins, etc). Write an SQL query to get the data you need, then make a graph using Plotly Express to visualize the comparison. What do you learn?__
 
-_type your results and analysis here_
-
-```{python}
-#| label: Q3
-#| code-summary: Read and format data
-# Include and execute your code here
-
-
-```
-
-_include figures in chunks and discuss your findings in the figure._
+_
+For this last question, I picked the Boston Red Sox (BOS) and the New York Yankees (NYA) because they're two teams I am familiar with. I chose home runs as the metric because I think it's amazing when players hit them. It looks like the Yankees hit over 2500 more home runs than the Red Sox. As we can observe both in the query results and the visualization below._
 
 ```{python}
-#| label: Q3 chart
-#| code-summary: plot example
-#| fig-cap: "My useless chart"
-#| fig-align: center
-# Include and execute your code here
-chart = px.bar(df.head(200),
-    x="name", 
-    y="AK"
-)
-chart.show()
+
+q3 = '''
+    SELECT b.teamID, SUM(HR) AS total_home_runs
+    FROM batting AS b
+    WHERE teamID IN ('NYA', 'BOS')
+    GROUP BY teamID;
+'''
+
+question_3 = pd.read_sql_query(q3,con)
+    
+question_3
+
 ```
 
 
 ```{python}
-#| label: Q3 table
-#| code-summary: table example
-#| tbl-cap: "Not much of a table"
-#| tbl-cap-location: top
-# Include and execute your code here
-mydat = df.head(1000)\
-    .groupby('year')\
-    .sum()\
-    .reset_index()\
-    .tail(10)\
-    .filter(["year", "AK","AR"])
 
-display(mydat)
+visual = px.bar(question_3, x='teamID', y='total_home_runs', title='Total Home Runs Comparison',
+             labels={'teamID': 'Team', 'total_home_runs': 'Total Home Runs'})
+
+visual.show()
 
 ```
