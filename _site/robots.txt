@@ -1,1 +1,1 @@
-Sitemap: https://byui-cse.github.io/byuids-portfolio/sitemap.xml
+Sitemap: https://sotoana.github.io/DS-250/sitemap.xml

@@ -60,11 +60,11 @@ results
 q = '''
     SELECT * 
     FROM sqlite_master 
-    WHERE type='table'
+    WHERE type='table'      
     '''
 table = pd.read_sql_query(q,con)
 table.filter(['name'])
-
+   
 ```
 ## Elevator pitch
 
