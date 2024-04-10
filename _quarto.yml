@@ -21,8 +21,8 @@ website:
     right:
       - text: "Home"
         file: index.qmd
-      - text: "DS250 Projects"
-        file: projects.qmd
+      # - text: "DS250 Projects"
+      #   file: projects.qmd
       - text: "My Resume"
         file: resume.qmd
       - text: "Data Cleansing"
@@ -39,27 +39,27 @@ website:
         file: competition.qmd
       
   sidebar:
-    - title: "DS 250 Projects"
+    - title: "Data Cleansing"
       style: "docked"
       background: light
       contents:
-        - text: "DS250 Projects"
-          file: projects.qmd
+        - text: "Data Cleansing"
+          file: cleansing.qmd
         - text: "---"
         - text: "Project 1"
-          file: Projects/project1.qmd
+          file: Cleansing/project1.qmd
         - text: "---"
         - text: "Project 2"
-          file: Projects/project2.qmd
+          file: Cleansing/project2.qmd
         - text: "---"
         - text: "Project 3"
-          file: Projects/project3.qmd
+          file: Cleansing/project3.qmd
         - text: "---"
         - text: "Project 4"
-          file: Projects/project4.qmd
+          file: Cleansing/project4.qmd
         - text: "---"
         - text: "Project 5"
-          file: Projects/project5.qmd
+          file: Cleansing/project5.qmd
         - text: "---"
         #continue the pattern if you need more links
         #copy paste from title and keep it indented to sidebar to add additonal sidebar navigation for other pages
